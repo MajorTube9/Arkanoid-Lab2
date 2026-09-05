@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 67c502db0274edc47b510268c1780f4f
+guid: 4fda63270ac2eb247ad406b75079c7a8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4135370249655312360
-    second: element_blue_rectangle_0
+      213: 4855700765788883232
+    second: 360_F_353920327_W4ku5ZLFVHe1GEg9Iy72QLe2SonodrBz_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: element_blue_rectangle_0
+      name: 360_F_353920327_W4ku5ZLFVHe1GEg9Iy72QLe2SonodrBz_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 32
+        width: 480
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ef5c69f459c36930800000000000000
-      internalID: 4135370249655312360
+      spriteID: 0294070be1ae26340800000000000000
+      internalID: 4855700765788883232
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      element_blue_rectangle_0: 4135370249655312360
+      360_F_353920327_W4ku5ZLFVHe1GEg9Iy72QLe2SonodrBz_0: 4855700765788883232
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

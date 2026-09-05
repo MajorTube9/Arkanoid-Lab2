@@ -1,16 +1,23 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // Importa o novo sistema de input do Unity
+using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PaddleController : MonoBehaviour
 {
     public float velocidade = 10f;
     public float limiteX = 7.5f;
 
+    private Vector3 escalaOriginal;
+
+    void Start()
+    {
+        escalaOriginal = transform.localScale;
+    }
+
     void Update()
     {
         float direcao = 0f;
 
-        // Verifica o teclado usando o Novo Input System (Keyboard atual)
         if (Keyboard.current != null)
         {
             if (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed)
@@ -23,11 +30,26 @@ public class PaddleController : MonoBehaviour
             }
         }
 
-        // Movimenta a nave
         transform.Translate(Vector2.right * direcao * velocidade * Time.deltaTime);
 
-        // Trava para a nave não sair da tela
         float posicaoX = Mathf.Clamp(transform.position.x, -limiteX, limiteX);
         transform.position = new Vector3(posicaoX, transform.position.y, transform.position.z);
+    }
+
+    public void AumentarPaddle()
+    {
+        StopAllCoroutines();
+        StartCoroutine(EfeitoAumentarPaddle());
+    }
+
+    IEnumerator EfeitoAumentarPaddle()
+    {
+        // Altere o multiplicador (ex: 1.8f) se quiser que fique maior ou menor
+        transform.localScale = new Vector3(escalaOriginal.x * 1.8f, escalaOriginal.y, escalaOriginal.z);
+
+        // Altere o tempo (ex: 8f para 8 segundos) para o poder durar mais ou menos
+        yield return new WaitForSeconds(8f);
+
+        transform.localScale = escalaOriginal;
     }
 }
